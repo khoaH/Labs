@@ -48,17 +48,17 @@ int main()
 		cout<<"Nhap so hang 1, toan tu, so hang 2:"<<endl;
 		cin>>a>>op>>b;
 		cout<<"Ket qua la: "<<calculate(a,b,op)<<endl;
-		cout<<"Tiep tuc? y/n"<<endl;
-		cin>>more;
-		if (more=='y')
-			conti=true;
-		else if(more=='n')
-			conti=false;
-		else
+		do
 		{
-			cout<<"Nhap sai, ket thuc ct"<<endl;
-			conti=false;
-		}
+			cout<<"Tiep tuc? y/n"<<endl;
+			cin>>more;
+			if (more=='y')
+				conti=true;
+			else if(more=='n')
+				conti=false;
+			else
+				cout<<"Nhap sai, ket thuc ct"<<endl;
+		} while(more!='y'&&more!='n');
 	}
 	return 0;
 }
